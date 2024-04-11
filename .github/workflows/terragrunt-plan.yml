@@ -48,6 +48,12 @@ jobs:
                     -filter-mode=nofilter \
                     -fail-on-error
 
+      - name: Terragrunt init
+        working-directory: envs/dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yes | terragrunt init
+
       - name: Check terragrunt fmt
         working-directory: terragrunt/envs/dev
         run: terragrunt fmt -check
