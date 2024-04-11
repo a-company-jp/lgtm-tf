@@ -27,7 +27,7 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           token_format: access_token
-          workload_identity_provider: 'projects/228944830644/locations/global/workloadIdentityPools/default-pool/providers/provider-github'
+          workload_identity_provider: 'projects/228944830644/locations/global/workloadIdentityPools/gh-pool/providers/provider-github'
           service_account: 'gh-actions@lgtmgen-project.iam.gserviceaccount.com'
 
       - name: Terragrunt Init
