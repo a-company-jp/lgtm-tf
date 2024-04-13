@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-    path:
-      - 'terragrunt/**'
-      - '.github/workflows/terragrunt-apply.yml'
 jobs:
   run-terraform-apply:
     runs-on: ubuntu-latest
