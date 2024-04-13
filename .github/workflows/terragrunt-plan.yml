@@ -6,9 +6,6 @@ on:
     types:
       - opened
       - synchronize
-    paths:
-      - 'terragrunt/**'
-      - '.github/workflows/terragrunt-plan.yml'
 jobs:
   run-terraform-plan:
     runs-on: ubuntu-latest
