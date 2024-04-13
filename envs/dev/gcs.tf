@@ -9,7 +9,7 @@ resource "google_storage_bucket" "public_image_bucket" {
   cors {
     origin          = ["*"]
     method          = ["GET"]
-    response_header = ["*"]
+    response_header = ["Content-Type", "Access-Control-Allow-Origin"]
     max_age_seconds = 3600
   }
 }
