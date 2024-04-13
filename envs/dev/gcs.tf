@@ -1,9 +1,3 @@
-resource "google_storage_bucket_access_control" "public_image_bucket" {
-  bucket = google_storage_bucket.public_image_bucket.name
-  role   = "READER"
-  entity = "allUsers"
-}
-
 resource "google_storage_bucket" "public_image_bucket" {
   name     = "lgtm-public-image-bucket"
   location = "ASIA-NORTHEAST1"
