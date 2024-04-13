@@ -32,16 +32,3 @@ resource "google_cloud_run_service_iam_policy" "noauth" {
 
   policy_data = data.google_iam_policy.noauth.policy_data
 }
-
-resource "google_cloud_run_domain_mapping" "domain-mapping" {
-  location = "asia-northeast1"
-  name     = "lgtm.a.shion.pro"
-
-  metadata {
-    namespace = var.project_id
-  }
-
-  spec {
-    route_name = google_cloud_run_service.cloudrun-dev-main-backend.name
-  }
-}
