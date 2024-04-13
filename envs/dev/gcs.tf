@@ -7,7 +7,7 @@ resource "google_storage_bucket" "public_image_bucket" {
   uniform_bucket_level_access = true
 
   cors {
-    origin          = ["https://github.com"]
+    origin          = ["*"]
     method          = ["GET"]
     response_header = ["*"]
     max_age_seconds = 3600
