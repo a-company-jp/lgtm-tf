@@ -10,7 +10,7 @@ resource "google_storage_bucket" "public_image_bucket" {
   # https://cloud.google.com/storage/docs/locations
   force_destroy = false
 
-  uniform_bucket_level_access = true
+  uniform_bucket_level_access = false
 
   cors {
     origin          = [""]
