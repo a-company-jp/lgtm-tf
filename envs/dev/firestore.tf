@@ -5,5 +5,5 @@ resource "google_project_service" "firestore_api" {
 resource "google_firestore_database" "datastore_mode_database" {
   name        = "(default)"
   location_id = "asia-northeast1"
-  type        = "DATASTORE_MODE"
+  type        = "FIRESTORE_NATIVE"
 }
