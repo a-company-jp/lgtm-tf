@@ -21,15 +21,6 @@ resource "google_cloud_run_service" "cloudrun-dev-main-backend" {
           value = "8080"
         }
       }
-
-      containers {
-        name  = "frontend"
-        image = "asia-northeast1-docker.pkg.dev/${var.project_id}/dev-main/frontend:latest"
-        env {
-          name  = "PORT"
-          value = "3000"
-        }
-      }
     }
   }
 
