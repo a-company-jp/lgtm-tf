@@ -27,7 +27,8 @@ resource "google_cloud_run_v2_service" "cloudrun-dev-main-backend" {
   }
 
   traffic {
-    percent = 100
+    revision = "TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST"
+    percent  = 100
   }
 }
 
