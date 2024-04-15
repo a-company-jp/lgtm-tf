@@ -51,7 +51,7 @@ jobs:
         working-directory: envs/dev
         run: terragrunt validate
 
-      - name: Terragrunt plan
+      - name: Terragrunt apply
         working-directory: envs/dev
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
