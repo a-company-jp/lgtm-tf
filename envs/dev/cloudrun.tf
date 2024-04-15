@@ -25,11 +25,6 @@ resource "google_cloud_run_v2_service" "cloudrun-dev-main-backend" {
       }
     }
   }
-
-  traffic {
-    revision = "TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION"
-    percent  = 100
-  }
 }
 
 data "google_iam_policy" "noauth" {
